@@ -12,22 +12,32 @@ permissions:
 
 jobs:
   setup-check:
-    name: Verify repository setup
+    name: Verify YouTube Agent Files
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check README
+      - name: Verify agent instruction files
         run: |
-          test -f README.md
-          echo "README.md found"
+          test -f research-agent.md
+          test -f content-growth-agent.md
+          echo "Both agent instruction files found."
 
-      - name: Check workflow directory
+      - name: Verify channel configuration
         run: |
-          test -d .github/workflows
-          echo "Workflow directory found"
+          test -f config/channel-profile.yml
+          echo "Channel configuration found."
 
-      - name: Setup verification complete
-        run: echo "YouTube AI Agent repository is ready for the next setup stage."
+      - name: Verify task templates
+        run: |
+          test -f tasks/README.md
+          test -f tasks/research-request.md
+          test -f tasks/content-request.md
+          echo "All task files found."
+
+      - name: Verification complete
+        run: |
+          echo "YouTube AI Agent workspace structure verified."
+          echo "Human approval is required before publishing."
