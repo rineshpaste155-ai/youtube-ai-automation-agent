@@ -43,7 +43,9 @@ jobs:
           test -f tasks/content-production/README.md
           test -f tasks/content-production/content-package-template.md
           test -f tasks/content-production/content-agent-workflow.md
-          echo "Content production system verified."
+          test -f tasks/content-production/content-execution-request.md
+          test -f tasks/content-production/commands.md
+          echo "All content production files found."
 
       - name: Verification complete
         run: |
