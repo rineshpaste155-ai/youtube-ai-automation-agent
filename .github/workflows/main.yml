@@ -21,9 +21,10 @@ jobs:
 
       - name: Verify agent instruction files
         run: |
+          test -f master-agent-instructions.md
           test -f research-agent.md
           test -f content-growth-agent.md
-          echo "Both agent instruction files found."
+          echo "All agent instruction files found."
 
       - name: Verify channel configuration
         run: |
@@ -37,7 +38,14 @@ jobs:
           test -f tasks/content-request.md
           echo "All task files found."
 
+      - name: Verify content production system
+        run: |
+          test -f tasks/content-production/README.md
+          test -f tasks/content-production/content-package-template.md
+          test -f tasks/content-production/content-agent-workflow.md
+          echo "Content production system verified."
+
       - name: Verification complete
         run: |
-          echo "YouTube AI Agent workspace structure verified."
+          echo "YouTube AI Agent workspace verified."
           echo "Human approval is required before publishing."
