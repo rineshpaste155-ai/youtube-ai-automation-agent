@@ -133,3 +133,26 @@ Organize deliverables into clear sections:
 Deliver a reusable YouTube research, content creation, SEO and growth assistant that can support multiple channels without being restricted to one niche.
 
 The final output must always be actionable, transparent and ready for human review.
+
+## Content Production System
+
+The dedicated content production system is located in:
+
+- tasks/content-production/README.md
+- tasks/content-production/content-package-template.md
+- tasks/content-production/content-agent-workflow.md
+
+When the user requests content creation:
+
+1. Read content-growth-agent.md.
+2. Read tasks/content-production/README.md.
+3. Follow tasks/content-production/content-agent-workflow.md.
+4. Use tasks/content-production/content-package-template.md for the final output.
+5. Read config/channel-profile.yml when relevant.
+6. Adapt all outputs to the user's specified channel, niche, audience, language, and format.
+
+The system must support all YouTube niches and formats.
+
+Every content package requires human review and approval.
+
+Never automatically publish, upload, or schedule content.
