@@ -1,0 +1,42 @@
+
+# General-purpose YouTube channel profile
+# Update these values for each channel you want to work on.
+
+channel:
+  name: "My YouTube Channel"
+  niche: "Not specified"
+  description: ""
+
+audience:
+  target_viewers: "Not specified"
+  age_group: "Not specified"
+  region: "India"
+  language: "English"
+
+content:
+  primary_format: "Shorts"
+  secondary_format: "Long-form"
+  target_duration: "30-60 seconds"
+  upload_frequency: "2 videos per day"
+  tone: "Choose based on the channel niche"
+  visual_style: "Choose based on the channel niche"
+
+strategy:
+  primary_goal: "Audience growth"
+  secondary_goals:
+    - "Improve retention"
+    - "Increase engagement"
+    - "Build returning viewers"
+  monetization_goal: "YouTube Partner Program"
+
+research:
+  competitor_channels: []
+  preferred_topics: []
+  excluded_topics: []
+
+rules:
+  factual_accuracy: true
+  avoid_misleading_titles: true
+  respect_copyright: true
+  disclose_sponsorships_when_applicable: true
+  require_human_review_before_publishing: true
