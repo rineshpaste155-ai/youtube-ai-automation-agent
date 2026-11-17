@@ -1,0 +1,33 @@
+
+name: YouTube AI Agent - Setup Check
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  setup-check:
+    name: Verify repository setup
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check README
+        run: |
+          test -f README.md
+          echo "README.md found"
+
+      - name: Check workflow directory
+        run: |
+          test -d .github/workflows
+          echo "Workflow directory found"
+
+      - name: Setup verification complete
+        run: echo "YouTube AI Agent repository is ready for the next setup stage."
